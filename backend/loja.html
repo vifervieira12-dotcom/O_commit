@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja Vortex Tech - Catálogo Completo</title>
+    <meta name="description" content="Catálogo completo da Vortex Tech: smartphones 5G, smartwatches, fones de ouvido e acessórios com filtros por categoria, busca e ordenação por preço.">
+    <meta name="theme-color" content="#0a192f">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- =========================================================
+       CABEÇALHO COM LOGOMARCA
+       ========================================================= -->
+    <header class="cabecalho">
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo-vortex.png" alt="Vortex Tech" class="img-logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">← Voltar ao Início</a></li>
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="index.html#sobre">Sobre</a></li>
+                <li><a href="index.html#contato">Fale Conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- =========================================================
+       CONTEÚDO PRINCIPAL DA LOJA
+       ========================================================= -->
+    <main class="secao secao-loja" id="catalogo">
+        <div class="cabecalho-loja">
+            <h1>Catálogo de Produtos Vortex Tech</h1>
+            <p>Explore todos os nossos celulares, smartwatches, fones e acessórios tecnológicos:</p>
+        </div>
+
+        <!-- PAINEL DE FILTROS -->
+        <section class="painel-filtros">
+            <div class="linha-busca-ordem">
+                <div class="campo-busca-box">
+                    <input type="text" id="inputBusca" placeholder="🔍 Digite para buscar um produto (ex: Galaxy, iPhone, Fone)...">
+                </div>
+                <div class="ordem-box">
+                    <select id="selectOrdem">
+                        <option value="padrao">Ordenar por: Relevância</option>
+                        <option value="menor-preco">Preço: Menor para Maior</option>
+                        <option value="maior-preco">Preço: Maior para Menor</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Botões de Categoria -->
+            <div class="botoes-categorias">
+                <button class="btn-cat ativo" data-categoria="todos">Todos</button>
+                <button class="btn-cat" data-categoria="smartphones">Smartphones</button>
+                <button class="btn-cat" data-categoria="smartwatches">Smartwatches</button>
+                <button class="btn-cat" data-categoria="audio">Fones & Áudio</button>
+                <button class="btn-cat" data-categoria="acessorios">Acessórios</button>
+            </div>
+        </section>
+
+        <!-- GRID COM TODOS OS PRODUTOS DA LOJA -->
+        <div class="grid-loja" id="containerProdutos">
+            <!-- Os cards são inseridos dinamicamente pelo loja.js -->
+        </div>
+    </main>
+
+    <!-- =========================================================
+       RODAPÉ ORGANIZADO
+       ========================================================= -->
+    <footer>
+        <div class="rodape-conteudo">
+            <p><strong>Vortex Tech - Celulares & Eletrônicos</strong></p>
+            <p>Atendimento: contato@vortextech.com | (86) 99999-9999</p>
+            <p class="rodape-copia">&copy; 2026 Vortex Tech. Projeto Final Interdisciplinar - PIT (Desenvolvimento Web para IA & Banco de Dados).</p>
+        </div>
+    </footer>
+
+    <!-- =========================================================
+       CHATBOT FLUTUANTE (FIXO NO CANTO INFERIOR DIREITO)
+       ========================================================= -->
+    <!-- Botão Flutuante (Bolinha com balão de conversa) -->
+    <button id="btn-chat-flutuante" class="btn-chat-flutuante" type="button" aria-label="Abrir conversa com o VortexBot" aria-expanded="false" aria-controls="janela-chat" title="Falar com o assistente">
+        💬
+    </button>
+
+    <!-- Janela de Chat (estilo WhatsApp) -->
+    <div id="janela-chat" class="janela-chat" role="dialog" aria-label="Conversa com o VortexBot">
+        <div class="chat-header">
+            <div class="chat-info">
+                <strong>VortexBot</strong>
+                <span class="status-online">● Online</span>
+            </div>
+            <button id="btn-fechar-chat" class="btn-fechar-chat" type="button" title="Fechar" aria-label="Fechar conversa">✕</button>
+        </div>
+
+        <div id="chat-mensagens" class="chat-mensagens" aria-live="polite">
+            <div class="mensagem bot">
+                <p>Olá! Sou o <strong>VortexBot</strong>, assistente virtual da Vortex Tech. 👋</p>
+                <p>Como posso te ajudar a escolher o melhor smartphone ou eletrônico hoje?</p>
+            </div>
+        </div>
+
+        <form id="form-chat" class="chat-input-area">
+            <input type="text" id="input-mensagem" placeholder="Digite sua mensagem..." autocomplete="off" maxlength="500" aria-label="Digite sua mensagem">
+            <button type="submit" id="btn-enviar-mensagem" title="Enviar" aria-label="Enviar mensagem">➤</button>
+        </form>
+    </div>
+
+    <script src="loja.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

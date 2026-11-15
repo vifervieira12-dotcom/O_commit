@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vortex Tech - Celulares & Eletrônicos</title>
+    <meta name="description" content="Vortex Tech: loja de celulares, smartwatches, fones e acessórios tecnológicos com os melhores preços e garantia oficial.">
+    <meta name="theme-color" content="#0a192f">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- =========================================================
+       CABEÇALHO COM LOGOMARCA (IMAGEM) E MENU FUNCIONAL (4 MENUS)
+       ========================================================= -->
+    <header class="cabecalho" id="inicio">
+        <div class="logo">
+            <img src="logo-vortex.png" alt="Vortex Tech - Celulares & Eletrônicos" class="img-logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- =========================================================
+       SEÇÃO HERO / DESTAQUE PRINCIPAL
+       ========================================================= -->
+    <section class="hero">
+        <div class="hero-conteudo">
+            <h1>Os melhores smartphones e eletrônicos do mercado</h1>
+            <p>Tecnologia de ponta, celulares modernos e gadgets com o melhor preço e garantia oficial.</p>
+        </div>
+    </section>
+
+    <!-- =========================================================
+       CORPO PRINCIPAL DIVIDIDO EM SEÇÕES
+       ========================================================= -->
+    <main>
+
+        <!-- SEÇÃO 1: SOBRE NÓS -->
+        <section class="secao" id="sobre">
+            <h2>Sobre Nós</h2>
+            <p>A <strong>Vortex Tech</strong> é uma loja especializada na venda de smartphones, eletrônicos e acessórios inteligentes de última geração. Nosso compromisso é entregar tecnologia avançada, produtos 100% originais e o melhor custo-benefício, com atendimento de qualidade e suporte dedicado para você.</p>
+        </section>
+
+        <!-- SEÇÃO 2: PRODUTOS OFERTADOS EM CARDS (FLEXBOX) COM IMAGENS DE ALTA QUALIDADE -->
+        <section class="secao" id="produtos">
+            <h2>Nossos Produtos em Destaque</h2>
+            <p>Conheça as principais categorias de eletrônicos disponíveis em nossa loja:</p>
+
+            <div class="container-produtos">
+                <div class="card-produto">
+                    <img src="img/smartphones.jpg" alt="Smartphones topo de linha" class="img-card">
+                    <h3>Smartphones 5G</h3>
+                    <p>Celulares topo de linha e intermediários com câmeras profissionais, telas AMOLED e alto desempenho.</p>
+                </div>
+
+                <div class="card-produto">
+                    <img src="img/smartwatch.jpg" alt="Smartwatches e wearables" class="img-card">
+                    <h3>Smartwatches</h3>
+                    <p>Relógios inteligentes para acompanhar sua saúde, monitorar treinos, batimentos e receber notificações.</p>
+                </div>
+
+                <div class="card-produto">
+                    <img src="img/fones.jpg" alt="Fones de ouvido e acessórios" class="img-card">
+                    <h3>Fones & Gadgets</h3>
+                    <p>Fones Bluetooth com cancelamento de ruído, carregadores rápidos por indução e caixas de som Hi-Fi.</p>
+                </div>
+            </div>
+
+            <!-- Botão para acessar a Loja completa -->
+            <div class="box-btn-loja">
+                <a href="loja.html" class="btn-loja">Loja</a>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 3: ÁREA COM FORMULÁRIO (CONTATO / PEDIDOS) -->
+        <section class="secao" id="contato">
+            <h2>Solicitar Pedido ou Atendimento</h2>
+            <p>Tem dúvidas sobre algum aparelho ou quer fazer um pedido? Preencha o formulário abaixo:</p>
+
+            <form id="form-contato">
+                <div class="campo-form">
+                    <label for="nome">Nome completo</label>
+                    <input type="text" name="nome" id="nome" placeholder="Seu Nome Completo" autocomplete="name" maxlength="100" required>
+                </div>
+                <div class="campo-form">
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email" placeholder="Seu E-mail" autocomplete="email" maxlength="120" required>
+                </div>
+                <div class="campo-form">
+                    <label for="assunto">Assunto</label>
+                    <input type="text" name="assunto" id="assunto" placeholder="Dúvida, Orçamento ou Pedido" maxlength="120" required>
+                </div>
+                <input type="hidden" name="produto" id="produto">
+                <div class="campo-form">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea name="mensagem" id="mensagem" placeholder="Escreva aqui sua mensagem ou o aparelho que deseja comprar..." maxlength="1000" required></textarea>
+                </div>
+                <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+                <p id="status-contato" class="status-contato" role="status"></p>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- =========================================================
+       RODAPÉ ORGANIZADO
+       ========================================================= -->
+    <footer>
+        <div class="rodape-conteudo">
+            <p><strong>Vortex Tech - Celulares & Eletrônicos</strong></p>
+            <p>Atendimento: contato@vortextech.com | (86) 99999-9999</p>
+            <p class="rodape-copia">&copy; 2026 Vortex Tech. Projeto Final Interdisciplinar - PIT (Desenvolvimento Web para IA & Banco de Dados).</p>
+        </div>
+    </footer>
+
+    <!-- =========================================================
+       CHATBOT FLUTUANTE (FIXO NO CANTO INFERIOR DIREITO)
+       ========================================================= -->
+    <!-- Botão Flutuante (Bolinha com balão de conversa) -->
+    <button id="btn-chat-flutuante" class="btn-chat-flutuante" type="button" aria-label="Abrir conversa com o VortexBot" aria-expanded="false" aria-controls="janela-chat" title="Falar com o assistente">
+        💬
+    </button>
+
+    <!-- Janela de Chat (estilo WhatsApp) -->
+    <div id="janela-chat" class="janela-chat" role="dialog" aria-label="Conversa com o VortexBot">
+        <!-- Cabeçalho do Chat -->
+        <div class="chat-header">
+            <div class="chat-info">
+                <strong>VortexBot</strong>
+                <span class="status-online">● Online</span>
+            </div>
+            <button id="btn-fechar-chat" class="btn-fechar-chat" type="button" title="Fechar" aria-label="Fechar conversa">✕</button>
+        </div>
+
+        <!-- Área de Mensagens -->
+        <div id="chat-mensagens" class="chat-mensagens" aria-live="polite">
+            <div class="mensagem bot">
+                <p>Olá! Sou o <strong>VortexBot</strong>, assistente virtual da Vortex Tech. 👋</p>
+                <p>Como posso te ajudar a escolher o melhor smartphone ou eletrônico hoje?</p>
+            </div>
+        </div>
+
+        <!-- Campo de Digitação e Envio -->
+        <form id="form-chat" class="chat-input-area">
+            <input type="text" id="input-mensagem" placeholder="Digite sua mensagem..." autocomplete="off" maxlength="500" aria-label="Digite sua mensagem">
+            <button type="submit" id="btn-enviar-mensagem" title="Enviar" aria-label="Enviar mensagem">➤</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
